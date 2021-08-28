@@ -1,0 +1,86 @@
+*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ExamenFinal;
+
+/**
+ *
+ * @author pc
+ */
+public class ControlAutomoviles {
+
+    static Object getAutomovilPosicion(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    static String getnota(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    private Motores motores;
+    private String color;
+    private int numerodePuertas;
+    private int año;
+    private String modelo;
+    private String estilo;
+    private byte indEstado; //1=en bodega,2= vendidos,3=devueltos
+    
+    public ControlAutomoviles(Motores motor,String color, int numerodePuertas,int año,String modelo,String estilo){
+        this.motores = motor;
+        this.color = color;
+        this.numerodePuertas = numerodePuertas;
+        this.año = año;
+        this.modelo = modelo;
+        this.estilo = estilo;
+}
+    public ControlAutomoviles(Motores motor, int numerodePuertas,int año,String modelo,String estilo){
+        this.motores = motor;
+        this.numerodePuertas = numerodePuertas;
+        this.año = año;
+        this.modelo = modelo;
+        this.estilo = estilo;
+        
+        
+    }
+    public Motores getMotores(){
+        return motores;
+    }
+    public void setMotores(Motores Motores){
+        this.motores = motores;
+    }
+    public int getnumerodePuertas(){
+        return numerodePuertas;
+    }
+    public int setnumerodePuertas(int numerodePuertas){
+        this.numerodePuertas = numerodePuertas;
+        return 0;
+    }
+    public int getAño(){
+        return año;
+    }
+    public void setAño(int año){
+        this.año = año;
+    }
+     public String getModelo(){
+        return modelo;
+    }
+    public void setModelo(String Modelo){
+        this.modelo = modelo; 
+    }
+    public String getEstilo(){
+        return estilo;
+}
+    public void setEstilo(String Estilo){
+        this.estilo = estilo;
+    }
+
+    void setIndEstado(byte b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+}
+    
+    
+        
+    
