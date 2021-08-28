@@ -1,0 +1,80 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ExamenFinal;
+
+/**
+ *
+ * @author pc
+ */
+public class AutomovilesFabricados {
+    
+    private static final int Cantidad_Max_Automoviles = 1500;
+    private ControlAutomoviles[] arreglodeAutomoviles;
+    private int cantidadAutomovilesRegistrados;
+    
+    
+    
+    public AutomovilesFabricados(){
+        arreglodeAutomoviles = new ControlAutomoviles[Cantidad_Max_Automoviles];
+        cantidadAutomovilesRegistrados = 0;
+    }
+
+    
+    public void agregarAutomovil( ControlAutomoviles auto){
+        try{
+        
+            try{
+                arreglodeAutomoviles[cantidadAutomovilesRegistrados++] = auto;
+                
+                //cantidadAutomovilesRegistrados = cantidadAutomovilesRegistrados + 1;
+                //arreglodeAutomoviles[cantidadAutomovilesRegistrados] = auto;
+            } catch (ArrayIndexOutOfBoundsException ae){
+                 System.out.println("demasiados datos para el vector de quices");
+                 cantidadAutomovilesRegistrados--;
+            }
+    }
+            catch(Exception e){
+                System.out.println("Error mas general");
+        }
+
+    
+        private void establecervehiculoVendido(ControlAutomoviles auto){
+       auto.setIndEstado((byte)2);
+        
+        
+    }
+    private void establecervehiculodevuelto(ControlAutomoviles auto){
+        
+    }
+
+    public int getIndice(){
+        return cantidadAutomovilesRegistrados;
+    }
+
+    public ControlAutomoviles getControlAutomovilesPosicion(int i){
+        return arreglodeAutomoviles [i];
+    }
+    public ControlAutomoviles[] getarreglodeAutomoviles(){
+        return arreglodeAutomoviles;
+    }
+    public void setarreglodeAutomoviles(ControlAutomoviles[] arreglodeAutomoviles ){
+        this.arreglodeAutomoviles = arreglodeAutomoviles;
+    }
+
+    int getOpcion() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void solicitedatosAutomoviles() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void iniciar() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+}
+
+    
