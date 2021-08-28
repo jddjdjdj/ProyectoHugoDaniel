@@ -1,0 +1,52 @@
+*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ExamenFinal;
+
+/**
+ *
+ * @author pc
+ */
+public class Controlador {
+    private AutomovilesFabricados sistemaAutomoviles;
+    private AutomovilesFabricados vista;
+    
+    public  Controlador(AutomovilesFabricados vista){
+        sistemaAutomoviles = new AutomovilesFabricados();
+        vista = new Controlador(sistemaAutomoviles);
+    }
+    public void inicia(){
+        int op;
+        do{
+            op = vista.getOpcion();
+            switch(op){
+                case 1:
+                    vista.solicitedatosAutomoviles();
+                    break;
+            }
+            
+            
+            
+                case 2:
+                    vista.muestreAutomovilesEnbodega();
+                    break;
+                case 3:
+                    vista.muestreAutomovilesEnvendidos();
+                    break;
+                case 4:
+                    vista.muestreAutomovilesvendidos();
+                    break;
+                
+                      
+                default:
+            
+        }
+        while(op ! = 3);
+}
+}
+
+
+
+        
