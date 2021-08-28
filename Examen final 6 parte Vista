@@ -1,0 +1,57 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ExamenFinal;
+
+import javax.swing.JOptionPane;
+import javax.swing.JTextArea;
+
+/**
+ *
+ * @author pc
+ */
+public class Vista {
+    private AutomovilesFabricados nota;
+    private int i;
+    public Vista(AutomovilesFabricados nota){
+        this.nota = nota;
+        
+    }
+    public int solicite(){
+        double notaDigitada;
+        
+        notaDigitada = Double.parseDouble(JOptionPane.showInputDialog("k"));
+        
+    }
+    public void muestra(){
+        JTextArea jt = new JTextArea();
+        for(int i = 0; < ControlAutomoviles.getIndice();i++){
+        if(ControlAutomoviles.getAutomovilPosicion(i).getIndEstado()==1){
+        jt.append(ControlAutomoviles.getnota(i)+"\n");
+    }
+        
+    }
+    }
+    
+        public int getOpcion(){
+            int t = 0;
+            try{
+                t = Integer.parseInt(JOptionPane.showInputDialog("1.agregar\n"
+                        + "2. Mostrar\n"
+                        +"3.Salir"));
+                if (( t <1) || (t > 3)){
+                    throw new Exception ("# de opcion es incorrecta");
+                }
+            } catch(Exception e){
+                JOptionPane.showMessageDialog(null, e.getMessage());
+            }
+            return t;
+                    
+                }
+            }
+        
+        
+    
+        
